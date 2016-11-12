@@ -7,6 +7,7 @@
 
 .wirelessCoffeeLocation {
     display: flex;
+    margin: 50px 0;
 }
 
 .wirelessCoffeeGreenDot {
@@ -25,4 +26,23 @@
 
 .wirelessCoffeeLocation p {
     margin-bottom: 10px;
+}
+
+.wirelessCoffeeLocations input {
+    font-size: 2em;
+    color: #111;
+    font-family: -apple-system, 'SF UI Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: none;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.wirelessCoffeeLocations input:focus {
+    outline: none;
+}
+
+@media (max-width: 40em) {
+    .wirelessCoffeeLocations input {
+        font-size: 1.25em;
+    }
 }
