@@ -9,7 +9,7 @@
     <small ng-show="!showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Create</small>
     <small ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Close</small>
 
-    <wireless-coffee-location ng-repeat="location in locations | filter:search"
+    <wireless-coffee-location ng-repeat="location in locations | filter:search | filter:{approved: true} | orderBy:'name'"
                               wireless-coffee-data="location"
     ></wireless-coffee-location>
     <p ng-show="(locations | filter:search).length < 1">Whoops! There wasn't a coffee shop found under that name!

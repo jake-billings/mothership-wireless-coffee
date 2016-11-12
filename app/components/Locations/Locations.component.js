@@ -15,6 +15,7 @@ angular.module('mothership-wireless-coffee')
                 $scope.resetNewLocation();
 
                 $scope.createLocation = function () {
+                    $scope.newLocation.approved = false;
                     Locations.$add($scope.newLocation);
                     $scope.resetNewLocation();
                 };
