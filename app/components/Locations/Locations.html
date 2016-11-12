@@ -1,5 +1,5 @@
 <div class="wirelessCoffeeLocations">
-    <input type="text" placeholder="Search for a coffee shop..." ng-model="search.$">
+    <input type="text" class="wirelessCoffeeSearch" placeholder="Search for a coffee shop..." ng-model="search.$">
     <div ng-repeat="location in locations | filter:search" class="wirelessCoffeeLocation">
         <wireless-coffee-location wireless-coffee-data="location"></wireless-coffee-location>
     </div>

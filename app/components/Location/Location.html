@@ -1,15 +1,32 @@
 <div class="wirelessCoffeeLocation">
     <div class="wirelessCoffeeGreenDot"></div>
     <div>
-        <h3>{{location.name}}</h3>
+        <h3>{{location.name}}
+            <small class="wirelessCoffeeEditLink" ng-click="toggleEditing()">{{editing?'Save':'Edit'}}</small>
+        </h3>
         <p>
-            <b>🗺&nbsp;&nbsp;Location:</b> {{location.location.streets}}
+            <b>🗺&nbsp;&nbsp;Location:</b>
+            <wireless-coffee-editable-text-field
+                    wireless-coffee-data="location.location.streets"
+                    wireless-coffee-editing="editing">
+
+            </wireless-coffee-editable-text-field>
         </p>
         <p>
-            <b>💻&nbsp;&nbsp;SSID:</b> {{location.ssid}}
+            <b>💻&nbsp;&nbsp;SSID:</b>
+            <wireless-coffee-editable-text-field
+                    wireless-coffee-data="location.ssid"
+                    wireless-coffee-editing="editing">
+
+            </wireless-coffee-editable-text-field>
         </p>
         <p>
-            <b>🔒&nbsp;&nbsp;Password:</b> {{location.password}}
+            <b>🔒&nbsp;&nbsp;Password:</b>
+            <wireless-coffee-editable-text-field
+                    wireless-coffee-data="location.password"
+                    wireless-coffee-editing="editing">
+
+            </wireless-coffee-editable-text-field>
         </p>
     </div>
 </div>

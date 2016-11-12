@@ -18,8 +18,10 @@ angular.module('mothership-wireless-coffee')
                     }
                 }
 
-                $scope.onChange = function () {
+                $scope.editing=false;
+                $scope.toggleEditing = function () {
                     Locations.$save($scope.location);
+                    $scope.editing = !$scope.editing;
                 }
             }],
             templateUrl: 'components/Location/Location.html'
