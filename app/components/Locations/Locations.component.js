@@ -3,7 +3,7 @@ angular.module('mothership-wireless-coffee')
         return {
             controller: ['$scope', 'Locations', function ($scope, Locations) {
                 $scope.locations = Locations;
-                console.log($scope);
+                $scope.location='zero';
             }],
             templateUrl: 'components/Locations/Locations.html'
         }

@@ -1,19 +1,8 @@
 <div class="wirelessCoffeeLocations">
     <input type="text" placeholder="Search for a coffee shop..." ng-model="search.$">
     <div ng-repeat="location in locations | filter:search" class="wirelessCoffeeLocation">
-        <div class="wirelessCoffeeGreenDot"></div>
-        <div>
-            <h3>{{location.name}}</h3>
-            <p>
-                <b>🗺&nbsp;&nbsp;Location:</b> {{location.location.streets}}
-            </p>
-            <p>
-                <b>💻&nbsp;&nbsp;SSID:</b> {{location.ssid}}
-            </p>
-            <p>
-                <b>🔒&nbsp;&nbsp;Password:</b> {{location.password}}
-            </p>
-        </div>
+        <wireless-coffee-location wireless-coffee-data="location"></wireless-coffee-location>
     </div>
-    <p ng-show="(locations | filter:search).length == 0">Whoops! There wasn't a coffee shop found under that name! 😦</p>
+    <p ng-show="(locations | filter:search).length < 1">Whoops! There wasn't a coffee shop found under that name!
+        😦</p>
 </div>

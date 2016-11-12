@@ -1,0 +1,22 @@
+.wirelessCoffeeLocation {
+    display: flex;
+    margin: 50px 0;
+}
+
+.wirelessCoffeeGreenDot {
+    width: 10px;
+    height: 10px;
+    background-color: #2ECC40;
+    border-radius: 5px;
+    margin: 10px 20px 0 0;
+}
+
+.wirelessCoffeeLocation h3 {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.wirelessCoffeeLocation p {
+    margin-bottom: 10px;
+}
