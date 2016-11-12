@@ -1,0 +1,21 @@
+{
+  "name": "mothership-wireless-coffee",
+  "authors": [
+    "jakebillings <jake@eakjb.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "keywords": [
+    "mothership"
+  ],
+  "license": "MIT",
+  "homepage": "wireless.coffee",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
