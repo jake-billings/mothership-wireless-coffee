@@ -1,0 +1,7 @@
+.wirelessCoffeEditableInput {
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: solid 2px #eee;
+    font-family: -apple-system, 'SF UI Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
