@@ -1,0 +1,27 @@
+{
+  "name": "mothership-wireless-coffee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/mothershipcode/mothership-wireless-coffee.git"
+  },
+  "author": "Henry Kaufman <henry@kaufman.io> (http://kaufman.io)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mothershipcode/mothership-wireless-coffee#readme",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean": "0.3.2",
+    "gulp-clean-css": "2.0.13",
+    "gulp-eslint": "3.0.1",
+    "gulp-if": "2.0.2",
+    "gulp-uglify": "2.0.0",
+    "gulp-useref": "3.1.2",
+    "pump": "1.0.1",
+    "run-sequence": "1.2.2"
+  }
+}
