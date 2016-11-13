@@ -14,7 +14,16 @@ angular.module('mothership-wireless-coffee')
 
                 $scope.resetNewLocation = function () {
                     $scope.showNewLocation = false;
-                    $scope.newLocation = {};
+                    $scope.newLocation = {
+                        location: {
+                            type: 'cross_street',
+                            streets: '',
+                            city: 'Denver',
+                            state: 'CO',
+                            country: 'USA',
+                            zip: '80202'
+                        }
+                    };
                 };
                 $scope.resetNewLocation();
 
