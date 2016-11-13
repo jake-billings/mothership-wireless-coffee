@@ -3,7 +3,7 @@
            autofocus>
 
     <wireless-coffee-location
-            ng-repeat="location in locations | filter:search | filter:{approved: true} | orderBy:'name'"
+            ng-repeat="location in locations | filter:search | filter:editable?{}:{approved: true} | orderBy:'name'"
             wireless-coffee-hide-toggle="!editable"
             wireless-coffee-data="location"
     ></wireless-coffee-location>

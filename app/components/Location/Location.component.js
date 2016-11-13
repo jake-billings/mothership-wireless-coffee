@@ -27,6 +27,15 @@ angular.module('mothership-wireless-coffee')
                     Locations.$save($scope.location);
                     $scope.editing = !$scope.editing;
                 };
+
+                $scope.deleteLocation = function () {
+                    Locations.$remove($scope.location);
+                };
+
+                $scope.approveLocation = function () {
+                    $scope.location.approved=true;
+                    Locations.$save($scope.location);
+                };
             }],
             templateUrl: 'components/Location/Location.html'
         };
