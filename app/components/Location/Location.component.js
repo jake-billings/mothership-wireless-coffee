@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module('mothership-wireless-coffee')
     .directive('wirelessCoffeeLocation', function () {
         return {
@@ -25,8 +26,8 @@ angular.module('mothership-wireless-coffee')
                 $scope.toggleEditing = function () {
                     Locations.$save($scope.location);
                     $scope.editing = !$scope.editing;
-                }
+                };
             }],
             templateUrl: 'components/Location/Location.html'
-        }
+        };
     });

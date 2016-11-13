@@ -1,17 +1,19 @@
 <div class="wirelessCoffeeLocations">
-    <input type="text" class="wirelessCoffeeSearch" placeholder="Search for a coffee shop..." ng-model="search.$">
+    <input type="text" class="wirelessCoffeeSearch" placeholder="Search for a coffee shop..." ng-model="search.$"
+           autofocus>
+
+    <wireless-coffee-location
+            ng-repeat="location in locations | filter:search | filter:{approved: true} | orderBy:'name'"
+            wireless-coffee-data="location"
+    ></wireless-coffee-location>
+    <p ng-show="(locations | filter:search).length < 1">Whoops! There wasn't a coffee shop found under that name!
+        😦</p>
     <wireless-coffee-location wireless-coffee-data="newLocation"
                               wireless-coffee-editing="true"
                               wireless-coffee-hide-toggle="true"
                               ng-if="showNewLocation"
     ></wireless-coffee-location>
-    <small ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="createLocation()">Create</small>
-    <small ng-show="!showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Create</small>
-    <small ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Close</small>
-
-    <wireless-coffee-location ng-repeat="location in locations | filter:search | filter:{approved: true} | orderBy:'name'"
-                              wireless-coffee-data="location"
-    ></wireless-coffee-location>
-    <p ng-show="(locations | filter:search).length < 1">Whoops! There wasn't a coffee shop found under that name!
-        😦</p>
+    <button ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="createLocation()">Create</button>
+    <button ng-show="!showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Create</button>
+    <button ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Close</button>
 </div>

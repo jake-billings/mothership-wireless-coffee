@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module('mothership-wireless-coffee')
     .directive('wirelessCoffeeNav', function () {
         return {

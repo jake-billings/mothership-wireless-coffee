@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module('mothership-wireless-coffee')
     .directive('wirelessCoffeeEditableTextField', function () {
         return {
@@ -7,5 +8,5 @@ angular.module('mothership-wireless-coffee')
                 onChange: '&wirelessCoffeeOnChange'
             },
             templateUrl: 'components/EditableTextField/EditableTextField.html'
-        }
+        };
     });

@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module('mothership-wireless-coffee')
     .directive('wirelessCoffeeLocations', function () {
         return {
@@ -21,5 +22,5 @@ angular.module('mothership-wireless-coffee')
                 };
             }],
             templateUrl: 'components/Locations/Locations.html'
-        }
+        };
     });
