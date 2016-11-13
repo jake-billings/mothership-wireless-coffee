@@ -5,6 +5,7 @@ var clean = require('gulp-clean');
 var uglify = require('gulp-uglify');
 var cleanCss = require('gulp-clean-css');
 var eslint = require('gulp-eslint');
+var inject = require('gulp-inject-string');
 
 
 var runSequence = require('run-sequence');
@@ -28,6 +29,7 @@ gulp.task('build-dependencies', function () {
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cleanCss({processImportFrom:['local']})))
+        .pipe(inject.after('<!-- build:analytics -->', "<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87310885-1', 'auto');ga('send', 'pageview');</script>"))
         .pipe(gulp.dest(DEST));
 });
 
