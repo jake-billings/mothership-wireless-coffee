@@ -3,7 +3,8 @@
            autofocus>
 
     <wireless-coffee-location
-            ng-repeat="location in locations | filter:search | filter:{approved: true} | orderBy:'name'"
+            ng-repeat="location in locations | filter:search | filter:editable?{}:{approved: true} | orderBy:'name'"
+            wireless-coffee-hide-toggle="!editable"
             wireless-coffee-data="location"
     ></wireless-coffee-location>
     <p ng-show="(locations | filter:search).length < 1">Whoops! There wasn't a coffee shop found under that name!
@@ -13,7 +14,7 @@
                               wireless-coffee-hide-toggle="true"
                               ng-if="showNewLocation"
     ></wireless-coffee-location>
-    <button ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="createLocation()">Create</button>
-    <button ng-show="!showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Create</button>
+    <button ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="createLocation()">Suggest</button>
+    <button ng-show="!showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Suggest</button>
     <button ng-show="showNewLocation" class="wirelessCoffeeCreateLink" ng-click="toggleShowNewLocation()">Close</button>
 </div>

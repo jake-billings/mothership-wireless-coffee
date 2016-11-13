@@ -2,6 +2,9 @@
 angular.module('mothership-wireless-coffee')
     .directive('wirelessCoffeeLocations', function () {
         return {
+            scope: {
+                editable: '=wirelessCoffeeEditable'
+            },
             controller: ['$scope', 'Locations', function ($scope, Locations) {
                 $scope.locations = Locations;
 
