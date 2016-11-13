@@ -1,13 +1,30 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-html,body {
+html, body {
     height: 100%;
     width: 100%;
     font-family: -apple-system, 'SF UI Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #111;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.wirelessCoffeeMaxWidth {
+    width: 90%;
+    max-width: 800px;
+    margin: 25px auto;
+    font-size: .75em;
+}
+
+.wirelessCoffeeMaxWidth a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+}
+
+.wirelessCoffeeMaxWidth a:hover {
+    color: #aaa;
 }
